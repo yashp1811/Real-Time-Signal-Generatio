@@ -124,6 +124,9 @@ The full training pipeline lives in `MODEL_FOLDER/model_create.ipynb`. It is des
 
 > The pre-trained artifacts in `MODEL_FOLDER/` were produced by this exact notebook. You only need to retrain if you want to update with newer data or change the architecture.
 
+### Sample data
+
+Sample OHLCV CSV files are included in `data/` so the reviewer can run the pipeline without relying only on external downloads. The training notebook can also regenerate fresh data using `yfinance`.
 ---
 
 ## API Reference
@@ -301,15 +304,15 @@ curl "http://localhost:8000/instruments/AAPL/history?limit=250"
 ## Benchmark Results
 
 **Hardware:** Intel Core i7-1255U (10-core), 16 GB RAM, Windows 11, CPU-only inference.  
-**Batch size:** 8 instruments.  
+**Batch size:** 24 instruments using aliases of the 8 supported instruments to stress-test batch concurrency.  
 **Concurrency level:** 8 worker threads (`ThreadPoolExecutor(max_workers=8)`).  
 **Timed requests:** 20 per mode (3 warm-up excluded).
 
 | Mode | p50 | p95 | p99 | Mean |
 |------|-----|-----|-----|------|
-| **Concurrent** | **54.1 ms** | 61.8 ms | 65.3 ms | 55.4 ms |
-| Sequential | 87.3 ms | 94.2 ms | 97.1 ms | 88.6 ms |
-| **Speedup** | **1.61×** | 1.52× | — | 1.60× |
+| **Concurrent** | **PUT_VALUE ms** | PUT_VALUE ms | PUT_VALUE ms | PUT_VALUE ms |
+| Sequential | PUT_VALUE ms | PUT_VALUE ms | PUT_VALUE ms | PUT_VALUE ms |
+| **Speedup** | **PUT_VALUE×** | PUT_VALUE× | — | PUT_VALUE× |
 
 The concurrent batch completes in approximately `max(individual latencies)` rather than `sum(individual latencies)`. Each `predict_one()` call runs in a separate OS thread. NumPy and PyTorch both release the Python GIL during their core C-extension matrix computations, allowing all 8 threads to execute in parallel rather than taking turns.
 
