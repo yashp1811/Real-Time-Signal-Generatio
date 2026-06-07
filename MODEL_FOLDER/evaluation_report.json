@@ -1,0 +1,394 @@
+[
+  {
+    "instrument": "AAPL",
+    "lgbm": {
+      "accuracy": 0.4123505976095618,
+      "f1": 0.32862191370111654,
+      "sharpe": 0.5393157058953345,
+      "max_drawdown": -0.1878422558491578,
+      "cumret": 0.2238492688617526
+    },
+    "global_transformer": {
+      "accuracy": 0.2350597609561753,
+      "f1": 0.1268817204301075,
+      "sharpe": -0.8363803515601743,
+      "max_drawdown": -0.5035753042066217,
+      "cumret": -0.4189837171680595
+    },
+    "finetuned_transformer": {
+      "accuracy": 0.2350597609561753,
+      "f1": 0.1268817204301075,
+      "sharpe": -0.8363803515601743,
+      "max_drawdown": -0.5035753042066217,
+      "cumret": -0.4189837171680595
+    },
+    "ensemble": {
+      "accuracy": 0.25697211155378485,
+      "f1": 0.24773685431497805,
+      "sharpe": 0.7250578925617476,
+      "max_drawdown": -0.1980386571755021,
+      "cumret": 0.34573217767252484
+    },
+    "always_up": {
+      "accuracy": 0.5079681274900398,
+      "f1": 0.22457067371202113,
+      "sharpe": 0.8363803515601743,
+      "max_drawdown": -0.33360514024536986,
+      "cumret": 0.47365537893315235
+    },
+    "persistence": {
+      "accuracy": 0.4243027888446215,
+      "f1": 0.1986013986013986,
+      "sharpe": -0.8363803515601743,
+      "max_drawdown": -0.5035753042066217,
+      "cumret": -0.4189837171680595
+    },
+    "ens_beats_always_up": true,
+    "ens_beats_persistence": true,
+    "ens_beats_lgbm": false,
+    "ens_beats_fine": true
+  },
+  {
+    "instrument": "EURUSD",
+    "lgbm": {
+      "accuracy": 0.394990366088632,
+      "f1": 0.3951987916059772,
+      "sharpe": 2.1431068065818484,
+      "max_drawdown": -0.05171450477774785,
+      "cumret": 0.3025916937127475
+    },
+    "global_transformer": {
+      "accuracy": 0.2774566473988439,
+      "f1": 0.14479638009049775,
+      "sharpe": -0.45760811312958094,
+      "max_drawdown": -0.14196960058401112,
+      "cumret": -0.06855184645079648
+    },
+    "finetuned_transformer": {
+      "accuracy": 0.27552986512524086,
+      "f1": 0.15971066425351438,
+      "sharpe": -0.4477342617772698,
+      "max_drawdown": -0.1407481219127111,
+      "cumret": -0.06722585141174353
+    },
+    "ensemble": {
+      "accuracy": 0.371868978805395,
+      "f1": 0.37128424181804015,
+      "sharpe": 2.185595470620615,
+      "max_drawdown": -0.051714504777747576,
+      "cumret": 0.3258991383253067
+    },
+    "always_up": {
+      "accuracy": 0.371868978805395,
+      "f1": 0.1807116104868914,
+      "sharpe": 0.45760811312958094,
+      "max_drawdown": -0.08459859450261817,
+      "cumret": 0.06282972824699118
+    },
+    "persistence": {
+      "accuracy": 0.3872832369942196,
+      "f1": 0.18611111111111112,
+      "sharpe": -0.45760811312958094,
+      "max_drawdown": -0.14196960058401112,
+      "cumret": -0.06855184645079648
+    },
+    "ens_beats_always_up": true,
+    "ens_beats_persistence": true,
+    "ens_beats_lgbm": false,
+    "ens_beats_fine": true
+  },
+  {
+    "instrument": "GBPUSD",
+    "lgbm": {
+      "accuracy": 0.4258188824662813,
+      "f1": 0.41686835668142735,
+      "sharpe": 2.5225879954153996,
+      "max_drawdown": -0.0407131365954011,
+      "cumret": 0.35043869874597466
+    },
+    "global_transformer": {
+      "accuracy": 0.2678227360308285,
+      "f1": 0.1408308004052685,
+      "sharpe": -0.4391532498976712,
+      "max_drawdown": -0.11751950703227991,
+      "cumret": -0.0641470607302157
+    },
+    "finetuned_transformer": {
+      "accuracy": 0.2947976878612717,
+      "f1": 0.24956330219488113,
+      "sharpe": 0.06877305315111838,
+      "max_drawdown": -0.10178848105651243,
+      "cumret": 0.0048908962374920595
+    },
+    "ensemble": {
+      "accuracy": 0.3622350674373796,
+      "f1": 0.36353875680261555,
+      "sharpe": 2.844348720779297,
+      "max_drawdown": -0.030227449102368853,
+      "cumret": 0.41358879915411384
+    },
+    "always_up": {
+      "accuracy": 0.4046242774566474,
+      "f1": 0.19204389574759947,
+      "sharpe": 0.4391532498976712,
+      "max_drawdown": -0.09356455843466795,
+      "cumret": 0.058416303037720496
+    },
+    "persistence": {
+      "accuracy": 0.22736030828516376,
+      "f1": 0.12349555206698064,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "cumret": 0.0
+    },
+    "ens_beats_always_up": true,
+    "ens_beats_persistence": true,
+    "ens_beats_lgbm": false,
+    "ens_beats_fine": true
+  },
+  {
+    "instrument": "GLD",
+    "lgbm": {
+      "accuracy": 0.4442231075697211,
+      "f1": 0.3598135444151276,
+      "sharpe": 1.9368095718518636,
+      "max_drawdown": -0.1640862558156351,
+      "cumret": 0.8266943398511675
+    },
+    "global_transformer": {
+      "accuracy": 0.23107569721115537,
+      "f1": 0.12513484358144553,
+      "sharpe": -2.190551460073235,
+      "max_drawdown": -0.5830803258767593,
+      "cumret": -0.5502605296176213
+    },
+    "finetuned_transformer": {
+      "accuracy": 0.2290836653386454,
+      "f1": 0.1273435640172563,
+      "sharpe": -2.3116475145744384,
+      "max_drawdown": -0.6000624792998306,
+      "cumret": -0.5685795132503937
+    },
+    "ensemble": {
+      "accuracy": 0.32270916334661354,
+      "f1": 0.3045565083431479,
+      "sharpe": 1.4322773532644566,
+      "max_drawdown": -0.13600016977698176,
+      "cumret": 0.5596988045450433
+    },
+    "always_up": {
+      "accuracy": 0.5338645418326693,
+      "f1": 0.23203463203463204,
+      "sharpe": 2.190551460073235,
+      "max_drawdown": -0.10127740838500261,
+      "cumret": 1.0882969600991315
+    },
+    "persistence": {
+      "accuracy": 0.37649402390438247,
+      "f1": 0.18234442836468887,
+      "sharpe": -2.190551460073235,
+      "max_drawdown": -0.5830803258767593,
+      "cumret": -0.5502605296176213
+    },
+    "ens_beats_always_up": true,
+    "ens_beats_persistence": true,
+    "ens_beats_lgbm": false,
+    "ens_beats_fine": true
+  },
+  {
+    "instrument": "MSFT",
+    "lgbm": {
+      "accuracy": 0.4243027888446215,
+      "f1": 0.3599256043300531,
+      "sharpe": -0.024847380779607773,
+      "max_drawdown": -0.3108617330077445,
+      "cumret": -0.05165365601346861
+    },
+    "global_transformer": {
+      "accuracy": 0.24701195219123506,
+      "f1": 0.13205537806176784,
+      "sharpe": -0.693198442530986,
+      "max_drawdown": -0.3885178477644927,
+      "cumret": -0.2997883940499907
+    },
+    "finetuned_transformer": {
+      "accuracy": 0.2549800796812749,
+      "f1": 0.2202447558657928,
+      "sharpe": -1.0053651806085093,
+      "max_drawdown": -0.44104300104683264,
+      "cumret": -0.39003314337966777
+    },
+    "ensemble": {
+      "accuracy": 0.3047808764940239,
+      "f1": 0.2973038208640303,
+      "sharpe": -0.008914742569771558,
+      "max_drawdown": -0.3167575761647103,
+      "cumret": -0.04793027352131296
+    },
+    "always_up": {
+      "accuracy": 0.50199203187251,
+      "f1": 0.22281167108753316,
+      "sharpe": 0.693198442530986,
+      "max_drawdown": -0.23726643220111443,
+      "cumret": 0.2942311191290494
+    },
+    "persistence": {
+      "accuracy": 0.42231075697211157,
+      "f1": 0.19794584500466852,
+      "sharpe": -0.693198442530986,
+      "max_drawdown": -0.3885178477644927,
+      "cumret": -0.2997883940499907
+    },
+    "ens_beats_always_up": true,
+    "ens_beats_persistence": true,
+    "ens_beats_lgbm": false,
+    "ens_beats_fine": true
+  },
+  {
+    "instrument": "NDX",
+    "lgbm": {
+      "accuracy": 0.4103585657370518,
+      "f1": 0.3523387660332274,
+      "sharpe": -0.1913462988224957,
+      "max_drawdown": -0.3184935148855368,
+      "cumret": -0.11344535977419656
+    },
+    "global_transformer": {
+      "accuracy": 0.2290836653386454,
+      "f1": 0.1242571582928147,
+      "sharpe": -1.170571002680662,
+      "max_drawdown": -0.4444342007294743,
+      "cumret": -0.42013080005123815
+    },
+    "finetuned_transformer": {
+      "accuracy": 0.2749003984063745,
+      "f1": 0.19704971771990532,
+      "sharpe": -1.1295934346280434,
+      "max_drawdown": -0.4324624636413396,
+      "cumret": -0.40488590789362633
+    },
+    "ensemble": {
+      "accuracy": 0.3466135458167331,
+      "f1": 0.3449526173261019,
+      "sharpe": 0.0808286447810766,
+      "max_drawdown": -0.2769596502934081,
+      "cumret": -0.00947747804306942
+    },
+    "always_up": {
+      "accuracy": 0.5298804780876494,
+      "f1": 0.2309027777777778,
+      "sharpe": 1.170571002680662,
+      "max_drawdown": -0.24318464692528782,
+      "cumret": 0.5735964106057769
+    },
+    "persistence": {
+      "accuracy": 0.3784860557768924,
+      "f1": 0.18304431599229287,
+      "sharpe": -1.170571002680662,
+      "max_drawdown": -0.4444342007294743,
+      "cumret": -0.42013080005123815
+    },
+    "ens_beats_always_up": true,
+    "ens_beats_persistence": true,
+    "ens_beats_lgbm": false,
+    "ens_beats_fine": true
+  },
+  {
+    "instrument": "SPX",
+    "lgbm": {
+      "accuracy": 0.37649402390438247,
+      "f1": 0.3449290224326908,
+      "sharpe": 0.5588560660209678,
+      "max_drawdown": -0.1596895856184254,
+      "cumret": 0.15884028185924115
+    },
+    "global_transformer": {
+      "accuracy": 0.23904382470119523,
+      "f1": 0.12861736334405144,
+      "sharpe": -1.2397599996454507,
+      "max_drawdown": -0.35716840734642896,
+      "cumret": -0.3428653868546522
+    },
+    "finetuned_transformer": {
+      "accuracy": 0.24900398406374502,
+      "f1": 0.14735538177553115,
+      "sharpe": -1.242328268059347,
+      "max_drawdown": -0.35720521580348885,
+      "cumret": -0.3431029498184883
+    },
+    "ensemble": {
+      "accuracy": 0.36254980079681276,
+      "f1": 0.35657199461139166,
+      "sharpe": -0.25221994981169193,
+      "max_drawdown": -0.30173931729906667,
+      "cumret": -0.09750438902004743
+    },
+    "always_up": {
+      "accuracy": 0.5099601593625498,
+      "f1": 0.22515391380826735,
+      "sharpe": 1.2397599996454507,
+      "max_drawdown": -0.18902206184283954,
+      "cumret": 0.44607124899468054
+    },
+    "persistence": {
+      "accuracy": 0.36254980079681276,
+      "f1": 0.1773879142300195,
+      "sharpe": -1.2397599996454507,
+      "max_drawdown": -0.35716840734642896,
+      "cumret": -0.3428653868546522
+    },
+    "ens_beats_always_up": true,
+    "ens_beats_persistence": true,
+    "ens_beats_lgbm": true,
+    "ens_beats_fine": true
+  },
+  {
+    "instrument": "USO",
+    "lgbm": {
+      "accuracy": 0.4820717131474104,
+      "f1": 0.36152558198143336,
+      "sharpe": 0.9381198332515104,
+      "max_drawdown": -0.3573682918163823,
+      "cumret": 0.5630995128929657
+    },
+    "global_transformer": {
+      "accuracy": 0.30677290836653387,
+      "f1": 0.1565040650406504,
+      "sharpe": -0.22661482595797963,
+      "max_drawdown": -0.2924271097525117,
+      "cumret": -0.19117202791277776
+    },
+    "finetuned_transformer": {
+      "accuracy": 0.30677290836653387,
+      "f1": 0.24558290825755894,
+      "sharpe": -0.5294269389133368,
+      "max_drawdown": -0.38443938707511344,
+      "cumret": -0.3202439285109542
+    },
+    "ensemble": {
+      "accuracy": 0.3545816733067729,
+      "f1": 0.319657629077545,
+      "sharpe": 0.9381489674309907,
+      "max_drawdown": -0.3541022123629412,
+      "cumret": 0.5643624024802445
+    },
+    "always_up": {
+      "accuracy": 0.4760956175298805,
+      "f1": 0.21502474134053082,
+      "sharpe": 0.22661482595797963,
+      "max_drawdown": -0.2604932221954056,
+      "cumret": 0.048502396293532035
+    },
+    "persistence": {
+      "accuracy": 0.4641434262948207,
+      "f1": 0.21133786848072564,
+      "sharpe": -0.22661482595797963,
+      "max_drawdown": -0.2924271097525117,
+      "cumret": -0.19117202791277776
+    },
+    "ens_beats_always_up": true,
+    "ens_beats_persistence": true,
+    "ens_beats_lgbm": false,
+    "ens_beats_fine": true
+  }
+]
