@@ -2,7 +2,7 @@
 import { SignalResult } from "@/lib/types";
 
 const DIR_STYLES: Record<string, { label: string; icon: string; color: string; bg: string }> = {
-  up:   { label: "UP",   icon: "↑", color: "#22c55e", bg: "rgba(34,197,94,0.12)"  },
+  up:   { label: "UP",   icon: "↑", color: "#22c55e", bg: "rgba(34,197,94,0.12)"  }, 
   down: { label: "DOWN", icon: "↓", color: "#ef4444", bg: "rgba(239,68,68,0.12)"  },
   flat: { label: "FLAT", icon: "→", color: "#f59e0b", bg: "rgba(245,158,11,0.12)" },
 };
