@@ -37,8 +37,22 @@ export default function SignalCard({ signal, selected, onClick }: Props) {
       onClick={onClick}
       className="cursor-pointer rounded-xl p-4 transition-all duration-200"
       style={{
-        background: selected ? "rgba(59,130,246,0.15)" : dir ? dir.bg : "var(--bg-card)",
-        border: `1px solid ${selected ? "#3b82f6" : dir ? dir.color + "55" : "var(--border)"}`,
+        background: selected
+          ? "rgba(59,130,246,0.15)"
+          : isError
+          ? "rgba(239,68,68,0.10)"
+          : dir
+          ? dir.bg
+          : "var(--bg-card)",
+        border: `1px solid ${
+          selected
+            ? "#3b82f6"
+            : isError
+            ? "#ef4444"
+            : dir
+            ? dir.color + "55"
+            : "var(--border)"
+        }`,
       }}
     >
       {/* Row 1: instrument + last price */}
