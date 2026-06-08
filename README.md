@@ -316,6 +316,8 @@ curl "http://localhost:8000/instruments/AAPL/history?limit=250"
 
 The concurrent batch completes in approximately `max(individual latencies)` rather than `sum(individual latencies)`. Each `predict_one()` call runs in a separate OS thread. NumPy and PyTorch both release the Python GIL during their core C-extension matrix computations, allowing all 8 threads to execute in parallel rather than taking turns.
 
+**Why 1.61× and not ~8×?** Each individual `predict_one()` call completes in approximately 7–12 ms on this hardware — the models are small (~540 K parameters) and the data fits entirely in L3 cache. When each worker thread finishes that quickly, the total concurrent wall time is dominated by the slowest thread plus thread-pool overhead (~54 ms), while the sequential total is just eight 7–12 ms calls in a row (~87 ms). The gap widens significantly with heavier models, larger batch windows, or GPU → CPU transfer overhead — scenarios where individual inference takes hundreds of milliseconds rather than single digits.
+
 ---
 
 ## Model Evaluation
@@ -326,16 +328,16 @@ The concurrent batch completes in approximately `max(individual latencies)` rath
 
 ### Test-set metrics
 
-| Instrument | Ens Acc | Ens F1 | Ens Sharpe | Max DD | vs Always-Up | vs Persistence |
-|------------|---------|--------|------------|--------|:---:|:---:|
-| AAPL       | 0.257   | 0.248  | +0.73      | −0.20  | ✓  | ✓  |
-| EURUSD     | 0.372   | 0.371  | +2.19      | −0.05  | ✓  | ✓  |
-| GBPUSD     | 0.362   | 0.364  | +2.84      | −0.03  | ✓  | ✓  |
-| GLD        | 0.323   | 0.305  | +1.43      | −0.14  | ✓  | ✓  |
-| MSFT       | 0.305   | 0.297  | −0.01      | −0.32  | ✓  | ✓  |
-| NDX        | 0.347   | 0.345  | +0.08      | −0.28  | ✓  | ✓  |
-| SPX        | 0.363   | 0.357  | −0.25      | −0.30  | ✓  | ✓  |
-| USO        | 0.355   | 0.320  | +0.94      | −0.35  | ✓  | ✓  |
+| Instrument | Ens Acc | Ens F1 | Ens Sharpe | Max DD | Cum. Ret. | vs Always-Up | vs Persistence |
+|------------|---------|--------|------------|--------|-----------|:---:|:---:|
+| AAPL       | 0.257   | 0.248  | +0.73      | −0.20  | +34.6%    | ✓  | ✓  |
+| EURUSD     | 0.372   | 0.371  | +2.19      | −0.05  | +32.6%    | ✓  | ✓  |
+| GBPUSD     | 0.362   | 0.364  | +2.84      | −0.03  | +41.4%    | ✓  | ✓  |
+| GLD        | 0.323   | 0.305  | +1.43      | −0.14  | +56.0%    | ✓  | ✓  |
+| MSFT       | 0.305   | 0.297  | −0.01      | −0.32  | −4.8%     | ✓  | ✓  |
+| NDX        | 0.347   | 0.345  | +0.08      | −0.28  | −0.9%     | ✓  | ✓  |
+| SPX        | 0.363   | 0.357  | −0.25      | −0.30  | −9.8%     | ✓  | ✓  |
+| USO        | 0.355   | 0.320  | +0.94      | −0.35  | +56.4%    | ✓  | ✓  |
 
 **Baseline beats — plain statement:**
 
